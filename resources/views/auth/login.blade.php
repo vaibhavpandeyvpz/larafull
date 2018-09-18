@@ -57,6 +57,10 @@
                                     {{ __('Login') }}
                                 </button>
 
+                                <a class="btn btn-danger" href="{{ route('login.socialite', ['provider' => 'google']) }}">
+                                    {{ __('Login with Google+') }}
+                                </a>
+
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     {{ __('Forgot Your Password?') }}
                                 </a>

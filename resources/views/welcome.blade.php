@@ -5,7 +5,7 @@
 @endsection
 
 @section('body')
-    <div class="container">
+    <header class="container">
         <nav class="navbar navbar-expand-sm navbar-light">
             <a class="navbar-brand" href="{{ url('/') }}">{{ config('app.name', 'Laravel') }}</a>
             <button class="navbar-toggler" aria-controls="navbarNav" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}" data-target="#navbar-main" data-toggle="collapse">
@@ -28,5 +28,5 @@
                 </ul>
             </div>
         </nav>
-    </div>
+    </header>
 @endsection

@@ -1,7 +1,7 @@
 @extends('layouts.base')
 
 @section('body')
-    <main class="container">
+    <header class="container">
         <nav class="navbar navbar-expand-sm navbar-light">
             <a class="navbar-brand" href="{{ url('/') }}">{{ config('app.name', 'Laravel') }}</a>
             <button class="navbar-toggler" aria-controls="navbar-main" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}" data-target="#navbar-main" data-toggle="collapse">
@@ -25,6 +25,8 @@
                 </ul>
             </div>
         </nav>
+    </header>
+    <main class="container">
         @yield('content')
     </main>
 @endsection

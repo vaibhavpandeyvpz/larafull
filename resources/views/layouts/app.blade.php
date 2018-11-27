@@ -4,7 +4,7 @@
     <main class="container">
         <nav class="navbar navbar-expand-sm navbar-light">
             <a class="navbar-brand" href="{{ url('/') }}">{{ config('app.name', 'Laravel') }}</a>
-            <button class="navbar-toggler" aria-controls="navbarNav" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}" data-target="#navbar-main" data-toggle="collapse">
+            <button class="navbar-toggler" aria-controls="navbar-main" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}" data-target="#navbar-main" data-toggle="collapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbar-main">

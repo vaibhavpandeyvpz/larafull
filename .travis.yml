@@ -1,0 +1,25 @@
+language: php
+sudo: required
+dist: trusty
+
+php:
+- 7.2
+
+addons:
+  chrome: stable
+
+before_install:
+- mysql -e 'CREATE DATABASE IF NOT EXISTS test;'
+
+install:
+- cp .env.testing .env
+- travis_retry composer install --no-interaction --prefer-dist --no-suggest
+- php artisan config:cache
+- php artisan key:generate
+
+before_script:
+- google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+- php artisan serve &
+
+script:
+- php artisan dusk

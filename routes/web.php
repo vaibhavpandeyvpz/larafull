@@ -15,9 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
 Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider')->name('login.socialite');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::middleware('verified')->group(function() {
+
+    Route::get('/home', 'HomeController@index')->name('home');
+});

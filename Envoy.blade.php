@@ -44,6 +44,9 @@
     ln -s {{ $root }}/.env .env
     php artisan config:cache
     php artisan migrate --force
+    if [ ! -f storage/oauth-private.key ]; then
+        php artisan passport:install
+    fi
 @endtask
 
 @task('setup')

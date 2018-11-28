@@ -26,7 +26,7 @@
             </div>
         </nav>
     </header>
-    <main class="container">
+    <main class="container" id="app">
         @yield('content')
     </main>
 @endsection
